@@ -26,16 +26,6 @@
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tfoot>
-                    <tr>
-                        <th>No</th>
-                        <th>ID</th>
-                        <th>Nama</th>
-                        <th>Created At</th>
-                        <th>Updated At</th>
-                        <th>Action</th>
-                    </tr>
-                </tfoot>
                 <tbody>
                     @foreach ($datas as $data)
                         <tr>
@@ -45,12 +35,16 @@
                             <td>{{ $data->created_at }}</td>
                             <td>{{ $data->updated_at }}</td>
                             <td>
-                                <a href="/jenis/edit/{{ $data->id }}" class="btn btn-primary">Edit</a>
+                                <a href="/jenis/edit/{{ $data->id }}" class="btn btn-primary">
+                                    <i class="fas fa-edit"></i>
+                                </a>
                                 <form action="/delete-jenis/{{$data->id}}" method="POST" style="display: inline-block;" onsubmit="return confirm('Are you sure you want to delete {{ $data->jenis_id }}?');">
                                     @csrf
                                     @method('DELETE')
                                     <input type="hidden" value="{{ $data->id }}" name="id" id="id" />
-                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                    <button type="submit" class="btn btn-danger">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
                                 </form>
                             </td>
                         </tr>

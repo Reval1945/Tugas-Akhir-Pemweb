@@ -51,20 +51,6 @@
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tfoot>
-                    <tr>
-                        <th>No</th>
-                        <th>Id</th>
-                        <th>Sumber Dana</th>
-                        <th>Status</th>
-                        <th>Jenis</th>
-                        <th>Nominal</th>
-                        <th>Catatan</th>
-                        <th>File</th>
-                        <th>Dibuat Pada</th>
-                        <th>Action</th>
-                    </tr>
-                </tfoot>
                 <tbody>
                     @foreach ($pengeluaran as $data)
                         <tr>

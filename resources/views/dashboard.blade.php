@@ -8,7 +8,9 @@
         </div> 
 
         <div class="card-body"> 
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quas perferendis esse odio optio asperiores unde quibusdam sequi vero, animi ipsa, maiores quo similique numquam? Autem odio expedita aut sint!
+            Halo, pecinta hewan!
+            Selamat datang di Petshop — tempat terbaik untuk memenuhi kebutuhan hewan peliharaan kesayanganmu.
+            Jelajahi produk, pantau pesanan, dan rawat hewan peliharaanmu dengan lebih mudah dan cepat!
         </div> 
     </div> 
 @endsection
