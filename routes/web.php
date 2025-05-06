@@ -8,13 +8,15 @@ use App\Http\Controllers\PemasukanController;
 use App\Http\Controllers\PengeluaranController;
 use App\Http\Controllers\WishlistController;
 use App\Http\Controllers\SumberDanaController;
-
+use App\Http\Controllers\DashboardController;
 // Route utama langsung ke Dashboard
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/', function () {
-    return view('dashboard');
-    });
+    // Route::get('/', function () {
+    // return view('dashboard');
+    // });
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+
     Route::get('/jenis', function () {
     return view('jenis');
     });
@@ -34,7 +36,7 @@ Route::middleware(['auth'])->group(function () {
     });
     // auth
     Route::get('/register', [AuthController::class, 'registerPage']);
-    
+
     Route::post('/post-register', [AuthController::class, 'register']);
     Route::get('/login', [AuthController::class, 'loginPage'])->name('login');
     Route::post('/post-login', [AuthController::class, 'login']);
@@ -74,3 +76,6 @@ Route::post('/upload-excel', [WishlistController::class, 'upload']);
 
 Route::get('/sumberdana', [SumberDanaController::class, 'index']);
 Route::post('/add-sumber', [SumberDanaController::class, 'addSumber']);
+
+
+

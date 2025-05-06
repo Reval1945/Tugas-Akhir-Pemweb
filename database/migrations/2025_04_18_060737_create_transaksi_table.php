@@ -15,7 +15,7 @@ return new class extends Migration
         $table->id();
         $table->string('transaksi_id');
         $table->bigInteger('uid');
-        $table->varchar('tipe_transaksi');
+        $table->string('nama', 100);
         $table->integer('status');
         $table->bigInteger('jenis_id');
         $table->timestamps();
@@ -23,7 +23,7 @@ return new class extends Migration
         $table->text('catatan');
         $table->string('file');
         $table->integer('id_sumberdana');
-        
+
         });
     }
 
