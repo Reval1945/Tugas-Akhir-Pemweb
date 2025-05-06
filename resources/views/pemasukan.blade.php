@@ -68,7 +68,8 @@
                             <td>{{ $data->nama_transaksi }}</td>
                             <td>{{ $data->nominal }}</td>
                             <td>{{ $data->catatan }}</td>
-                            <td><a href="/uploads/{{ $data->file }}">{{ $data->file }}</a></td>
+                            {{-- <td><a href="/uploads/{{ $data->file }}">{{ $data->file }}</a></td> --}}
+                            <td><img src="/uploads/{{ $data->file }}" alt="File Image" width="100"></td>
                             <td>{{ $data->created_at }}</td>
                             <td>
                             <div class="d-flex gap-1">
