@@ -71,6 +71,64 @@
             </div>
         </div>
     </div>
+    <div>
+  <canvas id="transaksiChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    // const ctx = document.getElementById('myChart').getContext('2d');
+
+
+</script>
+
+<script>
+    const ctx = document.getElementById('transaksiChart').getContext('2d');
+
+    const labels = {!! json_encode(array_map(fn($d) => "Hari $d", $labels)) !!};
+    const data = {!! json_encode($data) !!};
+
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Jumlah Transaksi',
+                data: data,
+                borderColor: 'rgba(54, 162, 235, 1)',
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                tension: 0.4,
+                fill: true,
+                pointRadius: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Grafik Transaksi Harian Bulan Mei'
+                }
+            },
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Hari'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Jumlah Transaksi'
+                    },
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
 
 
 

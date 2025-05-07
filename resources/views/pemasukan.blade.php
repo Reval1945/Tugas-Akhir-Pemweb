@@ -22,7 +22,7 @@
     <div class="card-header py-3">
         <div class="row align-items-center">
             <div class="col-md-8">
-                <h6 class="m-0 font-weight-bold text-info">Pemasukan</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Pemasukan</h6>
             </div>
             <div class="col-md-4 text-right">
                 <a class="btn btn-primary mb-1 " data-toggle="modal" data-target="#addModal">
@@ -73,7 +73,7 @@
                             <td>{{ $data->created_at }}</td>
                             <td>
                             <div class="d-flex gap-1">
-                                <a href="/pemasukan/edit/{{ $data->id }}" class="btn btn-sm btn-primary" title="Edit">
+                                <a href="/pemasukan/edit/{{ $data->id }}" class="btn btn-sm btn-primary mr-1" title="Edit">
                                     <i class="fas fa-edit"></i>
                                 </a>
                                 <form action="/delete-pemasukan/{{ $data->id }}" method="POST"
