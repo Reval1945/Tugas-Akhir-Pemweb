@@ -22,10 +22,10 @@
     <div class="card-header py-3">
         <div class="row align-items-center">
             <div class="col-md-8">
-                <h6 class="m-0 font-weight-bold text-info">Pemasukan</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Pemasukan</h6>
             </div>
             <div class="col-md-4 text-right">
-                <a class="btn btn-success mr-2" data-toggle="modal" data-target="#addModal">
+                <a class="btn btn-primary mb-1 " data-toggle="modal" data-target="#addModal">
                     <i class="fas fa-plus"></i> Tambah Data
                 </a>
                 <a class="btn btn-primary" href="/cetakpemasukan" target="_blank">
@@ -68,14 +68,15 @@
                             <td>{{ $data->nama_transaksi }}</td>
                             <td>{{ $data->nominal }}</td>
                             <td>{{ $data->catatan }}</td>
-                            <td><a href="/uploads/{{ $data->file }}">{{ $data->file }}</a></td>
+                            {{-- <td><a href="/uploads/{{ $data->file }}">{{ $data->file }}</a></td> --}}
+                            <td><img src="/uploads/{{ $data->file }}" alt="File Image" width="100"></td>
                             <td>{{ $data->created_at }}</td>
                             <td>
                             <div class="d-flex gap-1">
-                                <a href="/pemasukan/edit/{{ $data->id }}" class="btn btn-sm btn-primary" title="Edit">
+                                <a href="/pemasukan/edit/{{ $data->id }}" class="btn btn-sm btn-primary mr-1" title="Edit">
                                     <i class="fas fa-edit"></i>
                                 </a>
-                                <form action="/delete-pemasukan/{{ $data->id }}" method="POST" 
+                                <form action="/delete-pemasukan/{{ $data->id }}" method="POST"
                                     onsubmit="return confirm('Are you sure you want to delete {{ $data->transaksi_id }}?');">
                                     @csrf
                                     @method('DELETE')

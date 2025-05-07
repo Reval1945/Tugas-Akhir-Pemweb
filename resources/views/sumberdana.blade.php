@@ -25,7 +25,7 @@
                     <h3 class="m-0 font-weight-bold text-primary">Sumber Dana</h3>
                 </div>
                 <div class="col">
-                    <a class="btn btn-success" data-toggle="modal" data-target="#addModal">Tambah Data</a>
+                    <a class="btn btn-primary" data-toggle="modal" data-target="#addModal">Tambah Data</a>
                 </div>
             </div>
         </div>
